@@ -1,3 +1,14 @@
+window.addEventListener("orientationchange", function() {
+    if (window.orientation === 90 || window.orientation === -90) {
+        // La orientación es horizontal, forzar la orientación vertical
+        if (screen.orientation.lock) {
+            screen.orientation.lock("portrait");
+        }
+    }
+});
+
+
+
 const header = document.querySelector("header");
 
 window.addEventListener("scroll", function(){
